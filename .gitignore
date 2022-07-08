@@ -1,0 +1,7 @@
+logs
+*.log
+.DS_Store
+.idea/
+dist/
+node_modules/
+tests/__coverage__/
