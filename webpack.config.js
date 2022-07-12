@@ -9,6 +9,7 @@ mode: 'development',
     output:{
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[hash].js',
+        assetModuleFilename: 'assets/images/[name].[ext]',
     },
     resolve: {
         extensions: [".js", ".jsx"],
@@ -49,9 +50,13 @@ mode: 'development',
             use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
 
         },
+        // {
+        //     test: /\.(png|svg|jpg|jpeg)$/,
+        //     use: ['file-loader']
+        // },
         {
-            test: /\.(png|svg|jpg|jpeg)$/,
-            use: ['file-loader']
+            test: /\.html$/,
+            use: ['html-loader'],
         }
     ]
     }
