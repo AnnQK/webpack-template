@@ -3,5 +3,6 @@ logs
 .DS_Store
 .idea/
 dist/
+build/
 node_modules/
 tests/__coverage__/
